@@ -47,7 +47,7 @@ info = [title,company,skills_required,more_info]
 df = pd.DataFrame(info,index=col_names)
 df = df.T
 
-writer = pd.ExcelWriter('File/jobs.xlsx', engine='xlsxwriter')
+writer = pd.ExcelWriter('jobs.xlsx', engine='xlsxwriter')
 df.to_excel(writer, sheet_name='Jobs',index = False)
 workbook=writer.book
 worksheet = writer.sheets['Jobs']
@@ -60,4 +60,4 @@ writer.save()
 writer.close()
 
 cwd = os.getcwd()
-os.popen(f'{cwd}\\File\\jobs.xlsx')
+os.popen(f'{cwd}\\jobs.xlsx')
