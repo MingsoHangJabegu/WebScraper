@@ -59,4 +59,5 @@ worksheet.set_column('A:D', 15, format)
 writer.save()
 writer.close()
 
-os.popen("E:/Python/Job/File/jobs.xlsx")
+cwd = os.getcwd()
+os.popen(f'{cwd}\\File\\jobs.xlsx')
